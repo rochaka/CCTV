@@ -21,12 +21,7 @@ public class Transactions {
         loginTest.Setup_browser();
         loginTest.Setupbrowse();
     }
-    @Test ( priority = 2 )
-    void Logingdata() throws IOException, InterruptedException {
-        loging_data loginTest = new loging_data();
-        loginTest.loging_data();
-        loginTest.loging();
-    }
+   
 
     @Test ( priority = 3 )
     void Shift() throws IOException, InterruptedException {
