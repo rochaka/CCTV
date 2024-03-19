@@ -21,6 +21,12 @@ public class Transactions {
         loginTest.Setup_browser();
         loginTest.Setupbrowse();
     }
+    @Test ( priority = 2 )
+    void Logingdata() throws IOException, InterruptedException {
+        loging_data loginTest = new loging_data();
+        loginTest.loging_data();
+        loginTest.loging();
+    }
    
 
     @Test ( priority = 3 )
@@ -36,7 +42,7 @@ public class Transactions {
     }
     @Test ( priority = 4 )
     void FILL() throws IOException, InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         String filePath = "Data"; // Replace with the path to your userdata.txt file
         List<String> userData = new ArrayList<>();
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
@@ -110,10 +116,10 @@ public class Transactions {
         reader.close();
 
         //Add Devices/ Button
-        driver.findElement(By.xpath("//*[@id=\"nova\"]/div[2]/div[2]/div[1]/form/div[1]/div/div/div[12]/div[2]/div/div/button")).click();
+        driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[1]/div[1]/div[1]/div[15]/div[2]/div[1]/div[1]/button[1]/span[1]/span[1]")).click();
 
         //Add Devices
-        driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div[1]/form/div[1]/div/div/div[12]/div[2]/div[1]/div/div[2]/div[1]/div/div[2]/div/div")).click();
+        driver.findElement(By.xpath("//*[@id=\"nova\"]/div[2]/div[2]/div[1]/form/div[1]/div/div/div[15]/div[2]/div[1]/div/div[2]/div[1]/div/div[2]/div/div")).click();
         driver.findElement(By.xpath("/html/body/div[9]/div/div")).click();
 
         //QTY
